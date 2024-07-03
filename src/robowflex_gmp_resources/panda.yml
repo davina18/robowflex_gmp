@@ -1,0 +1,84 @@
+name: (noname)
+robot_model_name: panda
+robot_state:
+  joint_state: 
+    position: [0.2336099303735022, -1.3622161731991955, -1.6691975365724145, -3.054274706651271, -0.06629249322485897, 1.6979439336352415, -1.0115876929385417, 0.0009985262545842313, 0.0009985262545842313]    
+    name: [panda_joint1, panda_joint2, panda_joint3, panda_joint4, panda_joint5, panda_joint6, panda_joint7, panda_finger_joint1, panda_finger_joint2]
+fixed_frame_transforms:
+  - child_frame_id: world
+    transform:
+      translation: [0, 0, 0]
+      rotation: [0, 0, 0, 1]
+
+world:
+  collision_objects:
+    - id: Table
+      primitives:
+        - type: box
+          dimensions: [0.8, 1.58, 0.019708]
+      primitive_poses:
+        - position: [0.00, 0.00, 0.71]
+          orientation: [0, 0, 0, 1]  
+    - id: Back
+      primitives:
+        - type: box
+          dimensions: [0.9, 0.01, 1.2]
+      primitive_poses:
+        - position: [0, 1.165, 0.6]
+          orientation: [0, 0, 0, 1]      
+    - id: Left
+      primitives:
+        - type: box
+          dimensions: [0.02, 0.4, 1.2]
+      primitive_poses:
+        - position: [0.45, 0.965, 0.6]
+          orientation: [0, 0, 0, 1]
+    - id: Right
+      primitives:
+        - type: box
+          dimensions: [0.02, 0.4, 1.2]
+      primitive_poses:
+        - position: [-0.45, 0.965, 0.6]
+          orientation: [0, 0, 0, 1]
+    - id: Bottom
+      primitives:
+        - type: box
+          dimensions: [0.88, 0.4, 0.06]
+      primitive_poses:
+        - position: [0, 0.965, 0.03]
+          orientation: [0, 0, 0, 1]
+    - id: Top
+      primitives:
+        - type: box
+          dimensions: [0.88, 0.4, 0.02]
+      primitive_poses:
+        - position: [0, 0.965, 1.19]
+          orientation: [0, 0, 0, 1]
+    - id: LowShelf
+      primitives:
+        - type: box
+          dimensions: [0.88, 0.4, 0.02]
+      primitive_poses:
+        - position: [0, 0.965, 0.43]
+          orientation: [0, 0, 0, 1]
+    - id: HighShelf
+      primitives:
+        - type: box
+          dimensions: [0.88, 0.4, 0.02]
+      primitive_poses:
+        - position: [0, 0.965, 0.8]
+          orientation: [0, 0, 0, 1]
+    - id: Box
+      primitives:
+        - type: box
+          dimensions: [0.132178, 0.168159, 0.142855]
+      primitive_poses:
+        - position: [0.256038, 1.008687, 0.89]
+          orientation: [0.000004, 0.00, -0.001168, 1]
+    - id: Cylinder
+      primitives:
+        - type: cylinder
+          dimensions: [0.23, 0.02]
+      primitive_poses:
+        - position: [-0.088217, 0.991900, 0.935]
+          orientation: [-0.000272, 0.000132, -0.000366, 1]
