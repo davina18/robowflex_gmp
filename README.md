@@ -1,20 +1,3 @@
-PART 3: Robot Manipulation (Hands-on Session)
-Robowflex Demos
-Open a new terminal:
-1. $ mkdir -p ~/cm3118_ws/src
-Skip this step if you already have the workspace.
-2. $ cd ~/cm3118_ws/src/
-3. $ git clone https://github.com/sasilva1998/robowflex.git
-Robowflex ROS package.
-4. $ git clone https://github.com/KavrakiLab/robowflex_resources.git
-ROS package with the description of several robots.
-5. $ cd ~/cm3118_ws
-6. $ catkin build -j 4
-If you get and error about disk quota being exceeded, clean ROS logs using:
-$ rosclean purge
-7. $ source ~/.bashrc
-
-
 # Installation Instructions
 
 Create a workspace with Robowflex inside:
