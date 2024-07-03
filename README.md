@@ -1,36 +1,53 @@
+PART 3: Robot Manipulation (Hands-on Session)
+Robowflex Demos
+Open a new terminal:
+1. $ mkdir -p ~/cm3118_ws/src
+Skip this step if you already have the workspace.
+2. $ cd ~/cm3118_ws/src/
+3. $ git clone https://github.com/sasilva1998/robowflex.git
+Robowflex ROS package.
+4. $ git clone https://github.com/KavrakiLab/robowflex_resources.git
+ROS package with the description of several robots.
+5. $ cd ~/cm3118_ws
+6. $ catkin build -j 4
+If you get and error about disk quota being exceeded, clean ROS logs using:
+$ rosclean purge
+7. $ source ~/.bashrc
+
+
 # Installation Instructions
 
 Create a workspace with Robowflex inside:
 ```sh
-cd ~
-mkdir -p rb_ws/src
+mkdir -p ~/rb_ws/src
 cd rb_ws
-source /opt/ros/melodic/setup.bash # if you haven't already
-catkin config --init
-cd src
-git clone https://github.com/KavrakiLab/robowflex.git
-catkin build
-```
-
-To try out a demo script, you first need a robot description.
-The easiest to try is the _Fetch_ robot, either by debian or source:
-```sh
-# Debian
-sudo apt install ros-melodic-fetch-ros
-
-# Or, Source
-cd ~/rb_ws/src
-git clone https://github.com/fetchrobotics/fetch_ros
-catkin build
-```
-
-After the workspace is built, source and run a demo:
-```sh
+git clone https://github.com/CardiffUniversityComputationalRobotics/robowflex.git
+git clone https://github.com/CardiffUniversityComputationalRobotics/robowflex_resources.git
 cd ~/rb_ws
-source ./devel/setup.bash
-rosrun robowflex_library fetch_test
-Navigate to the following directory:
+catkin build
+source ~/.bashrc
+```
+
+# Robowflex Motion Planning Demo
+
+The following demo attempts a set of grasp poses in Robowflex:
+
+In terminal 1 run:
 
 ```bash
-cd test_franka_gmp_simulation_bringup/src/
+roscore
 ```
+
+In terminal 2 run:
+
+```bash
+rosrun robowflex_library panda_shelf
+```
+
+In terminal 3 run:
+
+```bash
+rosrun rviz rviz -d rb_ws/src/robowflex_gmp/robowflex_library/rviz/default1.rviz
+```
+
+:warning: **Warning** :warning: The paths in the following files must be changed to your own paths: panda_shelf.cpp.
